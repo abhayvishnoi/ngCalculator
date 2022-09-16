@@ -1,5 +1,5 @@
 <div class="container">
-  <input class="result" [(ngModel)]="expr" />
+  <input class="result" [value]="expr" />
   <div class="button-container">
     <div class="button" *ngFor="let num of nums" (click)="pushNum(num)">
       {{ num }}

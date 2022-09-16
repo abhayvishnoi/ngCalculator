@@ -8,14 +8,14 @@ import { Component } from '@angular/core';
 export class AppComponent {
   nums = Array(10)
     .fill(0)
-    .map((num, i) => num + i)
+    .map((num, i) => String(num + i))
     .reverse();
   operators = ['+', '-', '*', '/'];
   operatorFlag = false;
-  expr = '0';
-  pushNum(num) {
+  expr: string = '0';
+  pushNum(num: string) {
     if (this.expr == '0') {
-      this.expr = String(num);
+      this.expr = num;
     } else {
       this.expr += num;
       if (this.operatorFlag === true) {
@@ -23,7 +23,7 @@ export class AppComponent {
       }
     }
   }
-  operatorPressed(operator) {
+  operatorPressed(operator: string) {
     this.expr += operator;
     this.operatorFlag = !this.operatorFlag;
   }
