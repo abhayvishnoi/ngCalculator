@@ -1,0 +1,17 @@
+<div class="container">
+  <input class="result" [(ngModel)]="expr" />
+  <div class="button-container">
+    <div class="button" *ngFor="let num of nums" (click)="pushNum(num)">
+      {{ num }}
+    </div>
+    <div
+      class="button operator"
+      *ngFor="let operator of operators"
+      (click)="operatorPressed(operator)"
+    >
+      {{ operator }}
+    </div>
+    <div class="button operator" (click)="reset()">C</div>
+  </div>
+  <div class="button equal" (click)="equalPressed()">=</div>
+</div>
