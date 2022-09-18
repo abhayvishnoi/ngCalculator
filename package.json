@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "surge": "cd dist/ng-calculator && surge --project . --domain https://ngcalculator.surge.sh"
   },
   "private": true,
   "dependencies": {
